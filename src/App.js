@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import { Route, Switch } from 'react-router-dom';
+
+import Header from './components/header/header.component';
+import MenuDirectory from './components/menu-directory/menu-directory.component';
+import Homepage from './pages/homepage/homepage.component';
+import RecentProjects from './pages/recent-projects/recent-projects.component';
+import Contact from './pages/contact/contact.component';
+import Resume from './pages/resume/resume.component';
+import Posts from './pages/posts/posts.component';
+import OnTheWeb from './components/on-the-web/on-the-web.component';
+import Footer from './components/footer/footer.component';
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-container'>
+      <Header />
+      <MenuDirectory />
+      <Switch>
+          <Route exact path='/' component={Homepage} />
+          <Route path='/projects' component={RecentProjects} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/resume' component={Resume} />
+          <Route path='/posts' component={Posts} />
+      </Switch>
+      <OnTheWeb />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
