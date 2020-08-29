@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { HomepageContainer, HomepageContent } from './homepage.styles';
+import { HomepageContainer, HomepageContent, HomepageContentLastLine } from './homepage.styles';
 
 
 const Homepage = () => {
     return (
         <HomepageContainer>
-            <div>
-                <HomepageContent>Hi</HomepageContent>
-            </div>
+            <HomepageContent>A software engineer,</HomepageContent>
+            <HomepageContent>front-end developer,</HomepageContent>
+            <HomepageContentLastLine>and sometimes plays guitar :)</HomepageContentLastLine>
         </HomepageContainer>
     );
 };

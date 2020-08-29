@@ -3,7 +3,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Header from './components/header/header.component';
-import MenuDirectory from './components/menu-directory/menu-directory.component';
 import Homepage from './pages/homepage/homepage.component';
 import RecentProjects from './pages/recent-projects/recent-projects.component';
 import Contact from './pages/contact/contact.component';
@@ -18,7 +17,6 @@ const App = () => {
   return (
     <div className='app-container'>
       <Header />
-      <MenuDirectory />
       <Switch>
           <Route exact path='/' component={Homepage} />
           <Route path='/projects' component={RecentProjects} />

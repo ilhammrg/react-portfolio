@@ -1,13 +1,15 @@
 import React from 'react';
 
+import { FooterContainer, FooterContent } from './footer.styles';
+
 const Footer = () => {
     return (
-        <div className='footer-container'>
-            <div className='footer-content'>
-                <span className='footer text'>From Bandung with </span>
-                <span className='footer-heart-icon'>&hearts;</span>
-            </div>
-        </div>
+        <FooterContainer>
+            <FooterContent>
+                <span className='footer-text'>From Bandung with </span>
+                <span className='footer-heart-icon material-icons'>favorite</span>
+            </FooterContent>
+        </FooterContainer>
     );
 };
 

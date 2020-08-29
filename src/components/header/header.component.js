@@ -10,12 +10,12 @@ const Header = () => {
             </LogoContainer>
             <MenuContainer>
                 <MenuItem>
-                    <MenuButton hovercolor='#f9d276'>
-                        <span className="material-icons">brightness_5</span>
+                    <MenuButton iconcolor="#f9d276" hovercolor='#f9d276'>
+                        <span className="material-icons">brightness_high</span>
                     </MenuButton>
                 </MenuItem>
                 <MenuItem>
-                    <MenuButton hovercolor='#4ecca3'>
+                    <MenuButton iconcolor="white" hovercolor='#4ecca3'>
                         <span className="material-icons">menu</span>
                     </MenuButton>
                 </MenuItem>
