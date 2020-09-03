@@ -20,17 +20,28 @@ export const HeaderContainer = styled.div`
 
 export const LogoContainer = styled.div`
     .brand-name {
-        font-size: 15px;
-        opacity: 0.87;
+        text-decoration: none;
+        color: white;   
+
+        h1 {
+            transition: 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+            font-size: 1.2rem;
+            opacity: 0.87;
+        }
 
         &:hover {
-            cursor: pointer;
+            h1 {
+                cursor: pointer;
+                opacity: 0.7;
+            }
         }
     }
 
     @media screen and (min-width: 450px) {
         .brand-name {
-            font-size: 28px;
+            h1 {
+                font-size: 1.5rem;
+            }
         }
     }
 `;
@@ -56,6 +67,7 @@ export const MenuButton = styled.button`
     font-family: inherit;
     border: 0;
     padding: 0;
+    margin: 0 5px;
     color: ${props => props.iconcolor};
     background-color: inherit;
     transition: 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
@@ -67,7 +79,7 @@ export const MenuButton = styled.button`
     }
 
     .material-icons {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     @media screen and (min-width: 450px) {

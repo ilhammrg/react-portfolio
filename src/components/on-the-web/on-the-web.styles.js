@@ -19,9 +19,15 @@ export const OnTheWebContainer = styled.div`
         display: inline-block;
 
         a {
+            display: block;
             text-decoration: none;
             color: inherit;
-            font-size: 0.8em;
+            font-size: 1rem;
+            transition: 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+            &:hover {
+                transform: translateY(-5px);
+            }
         }
     }
 
@@ -32,7 +38,7 @@ export const OnTheWebContainer = styled.div`
 
         li {
             a {
-                font-size: 1em;
+                font-size: 1.1rem;
             }
         }
     }
