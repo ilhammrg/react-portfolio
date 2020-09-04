@@ -6,31 +6,33 @@ export const HomepageContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 30vh;
+    padding-top: 10rem;
 `;
 
 export const HomepageContent = styled.span`
-    color: white;
-    font-size: 25px;
+    // color: white;
+    font-size: 1.5rem;
+    transition: 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
-    @media screen and (min-width: 450px) {
-        font-size: 40px
+    @media screen and (min-width: 768px) {
+        font-size: 2rem;
     }
 
-    @media screen and (min-width: 800px) {
-        font-size: 65px
+    @media screen and (min-width: 1024px) {
+        font-size: 4rem;
     }
 `;
 
 export const HomepageContentLastLine = styled.span`
-    color: white;
-    font-size: 18px;
+    // color: white;
+    font-size: 1.1rem;
+    transition: 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
-    @media screen and (min-width: 450px) {
-        font-size: 28px
+    @media screen and (min-width: 768px) {
+        font-size: 1.5rem;
     }
 
-    @media screen and (min-width: 800px) {
-        font-size: 48px
+    @media screen and (min-width: 1024px) {
+        font-size: 3rem;
     }
 `;

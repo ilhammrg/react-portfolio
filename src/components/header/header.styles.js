@@ -1,32 +1,28 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
-    background-color: #121212;
-    color: white;
+    // background-color: #121212;
+    // color: white;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @media screen and (min-width: 600px) {
-        padding: 30px;
-    }
 `;
 
 export const LogoContainer = styled.div`
     .brand-name {
         text-decoration: none;
-        color: white;   
+        color: inherit;   
 
         h1 {
             transition: 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
             font-size: 1.2rem;
             opacity: 0.87;
+            padding: 0.8rem;
         }
 
         &:hover {
@@ -37,10 +33,11 @@ export const LogoContainer = styled.div`
         }
     }
 
-    @media screen and (min-width: 450px) {
+    @media screen and (min-width: 768px) {
         .brand-name {
             h1 {
                 font-size: 1.5rem;
+                padding: 1rem;
             }
         }
     }
@@ -48,13 +45,8 @@ export const LogoContainer = styled.div`
 
 export const MenuContainer = styled.ul`
     display: flex;
-    width: 70px;
     flex-direction: row;
     justify-content: space-around;
-
-    @media screen and (min-width: 450px) {
-        width: 100px;
-    }
 `;
 
 export const MenuItem = styled.li`
@@ -66,8 +58,7 @@ export const MenuButton = styled.button`
     font-size: 100%;
     font-family: inherit;
     border: 0;
-    padding: 0;
-    margin: 0 5px;
+    padding: 0.5rem;
     color: ${props => props.iconcolor};
     background-color: inherit;
     transition: 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
@@ -79,12 +70,14 @@ export const MenuButton = styled.button`
     }
 
     .material-icons {
-        font-size: 30px;
+        font-size: 2rem;
     }
 
-    @media screen and (min-width: 450px) {
+    @media screen and (min-width: 768px) {
+        padding: 1rem;
+
         .material-icons {
-            font-size: 35px;
+            font-size: 2.2rem;
         }
     }
 `;

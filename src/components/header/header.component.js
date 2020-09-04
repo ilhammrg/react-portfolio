@@ -5,11 +5,13 @@ import NavMenu from '../nav-menu/nav-menu.component';
 import { Link } from 'react-router-dom';
 
 import { openNavMenu } from '../../redux/menu/menu.actions';
+import { switchDarkMode, switchLightMode } from '../../redux/app/app.actions';
 import { connect } from 'react-redux';
 import { selectNavPosition } from '../../redux/menu/menu.selectors';
+import { selectIsDarkModeActive } from '../../redux/app/app.selectors';
 import { createStructuredSelector } from 'reselect';
 
-const Header = ({ _openNavMenu, _navPosition }) => {
+const Header = ({ _openNavMenu, _navPosition, _isDarkModeActive, _switchDarkMode, _switchLightMode }) => {
     return (
         <HeaderContainer>
             <LogoContainer>
@@ -19,12 +21,19 @@ const Header = ({ _openNavMenu, _navPosition }) => {
             </LogoContainer>
             <MenuContainer>
                 <MenuItem>
-                    <MenuButton iconcolor="#f9d276" hovercolor='#f9d276'>
-                        <span className="material-icons">brightness_high</span>
+                    <MenuButton 
+                        onClick={() => {
+                            if(_isDarkModeActive) _switchLightMode();
+                            else _switchDarkMode();
+                        } } 
+                        iconcolor="#f9d276" 
+                        hovercolor='#f9d276'
+                    >
+                        <span className="material-icons">{_isDarkModeActive ? 'brightness_3' : 'brightness_7'}</span>
                     </MenuButton>
                 </MenuItem>
                 <MenuItem>
-                    <MenuButton onClick={() => _openNavMenu('translate(0,0)')} iconcolor="white" hovercolor='#4ecca3'>
+                    <MenuButton onClick={() => _openNavMenu('translate(0,0)')} iconcolor="inherit" hovercolor='#4ecca3'>
                         <span className="material-icons">menu</span>
                     </MenuButton>
                 </MenuItem>
@@ -35,12 +44,15 @@ const Header = ({ _openNavMenu, _navPosition }) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-    _navPosition: selectNavPosition
+    _navPosition: selectNavPosition,
+    _isDarkModeActive: selectIsDarkModeActive
 });
 
 const mapDispatchToProps = dispatch => {
     return {
-        _openNavMenu: (navPosition) => dispatch(openNavMenu(navPosition))
+        _openNavMenu: (navPosition) => dispatch(openNavMenu(navPosition)),
+        _switchDarkMode: () => dispatch(switchDarkMode()),
+        _switchLightMode: () => dispatch(switchLightMode())
     };
 };
 

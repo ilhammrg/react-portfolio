@@ -1,13 +1,12 @@
 import React from 'react';
 
-import CustomTitle from '../../components/custom-title/custom-title.component';
+import { PostsContainer } from './posts.styles';
 
 const Posts = () => {
     return (
-        <div className="posts-container">
-            <CustomTitle>Posts</CustomTitle>
-            <p>No post yet.</p>
-        </div>
+        <PostsContainer>
+            <p>Posts are being made, stay tune :)</p>
+        </PostsContainer>
     );
 };
 

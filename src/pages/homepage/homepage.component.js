@@ -6,9 +6,9 @@ import { HomepageContainer, HomepageContent, HomepageContentLastLine } from './h
 const Homepage = () => {
     return (
         <HomepageContainer>
-            <HomepageContent>A software engineer,</HomepageContent>
-            <HomepageContent>front-end developer,</HomepageContent>
-            <HomepageContentLastLine>and sometimes plays guitar :)</HomepageContentLastLine>
+            <HomepageContent>A software engineer</HomepageContent>
+            <HomepageContent>A front-end developer</HomepageContent>
+            <HomepageContentLastLine>And sometimes plays guitar :)</HomepageContentLastLine>
         </HomepageContainer>
     );
 };

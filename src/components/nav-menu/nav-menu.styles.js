@@ -22,7 +22,7 @@ export const MenuContainer = styled.div`
     button {
         padding: 0;
         border: none;
-        background-color: inherit;
+        background-color: transparent;
         color: white;
 
         span {

@@ -6,14 +6,15 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  height: 100%;
+  height: 100vh;
   width: 100%;
   color: white;
   background-color: #121212;
+  -webkit-transition: background-color 0.3s linear;
+    -moz-transition: background-color 0.3s linear;
+    -o-transition: background-color 0.3s linear;
+    -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 
 #root {

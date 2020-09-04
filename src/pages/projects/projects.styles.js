@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProjectContainer = styled.div`
-    padding: 20vh 0;
+    padding: 8rem 0;
 
     h2 {
         text-align: center;
@@ -19,13 +19,13 @@ export const ProjectList = styled.div`
 export const ProjectCard = styled.div`
     padding: 10px;
     width: 200px;
-    background-color: #2c2c2c;
+    // background-color: #2c2c2c;
     border-radius: 8px;
 
     a {
         display: block;
         text-decoration: none;
-        color: white;
+        color: inherit;
         transition: 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
         &:hover {
