@@ -18,9 +18,9 @@ const App = () => {
       <Header />
       <Switch>
           <Route exact path='/' component={Homepage} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/posts' component={Posts} />
+          <Route exact path='/projects' component={Projects} />
+          <Route exact path='/contact' component={Contact} />
+          <Route exact path='/posts' component={Posts} />
       </Switch>
       <OnTheWeb />
       <Footer />
