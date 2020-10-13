@@ -1,15 +1,8 @@
 {
-  "short_name": "ilhammrg",
-  "name": "Ilham Muhammad",
-  "icons": [
-    {
-      "src": "logo32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    }
-  ],
+  "short_name": "Ilham Gunawan",
+  "name": "Ilham Gunawan",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#ffffff",
+  "theme_color": "#17b794",
   "background_color": "#ffffff"
 }

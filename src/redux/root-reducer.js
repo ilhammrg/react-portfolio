@@ -3,18 +3,18 @@ import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import menuReducer from './menu/menu.reducer';
-import appReducer from './app/app.reducer';
+import themesReducer from './themes/themes.reducer';
+import projectsReducer from './projects/projects.reducer';
 
 const persistConfig = {
-    key: 'root',
-    storage,
-    blacklist: ['menu', 'app']
+  key: 'root',
+  storage,
+  blacklist: ['projects'],
 };
 
 const rootReducer = combineReducers({
-    menu: menuReducer,
-    app: appReducer
+  themes: themesReducer,
+  projects: projectsReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);
